@@ -1,0 +1,30 @@
+
+<h1>Liste des bibliothèques </h1>
+
+<!-- <p *ngIf="libraries?.length > 2">Il y a trop de bibliothèques!</p> -->
+
+<!-- <ul>
+  <li  *ngFor="let library of libraries">
+        {{ library.label + ' ' + library.type}}
+       {{ library.directorDTO.name + ' ' + library.directorDTO.surname.toLocaleUpperCase()}}
+  </li>
+</ul> -->
+
+
+<!-- <ul>
+<li  *ngFor="let library of libraries">
+    <span *ngIf="library.type === 'PUBLIC'" >
+        {{ library.label + ' ' + library.type}}
+        {{ library.directorDTO.name + ' ' + library.directorDTO.surname.toLocaleUpperCase()}}
+    </span>
+</li>
+</ul>  -->
+
+<h2>{{messageEventEmitter}}</h2>
+<app-library *ngFor="let myLibrary of libraries"
+      [library]="myLibrary"
+      (labelEmitter)="onLabelEmiter($event)">
+</app-library>  
+
+    
+

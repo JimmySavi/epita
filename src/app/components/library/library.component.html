@@ -1,0 +1,16 @@
+ <div class="library" (click) ="sendLabel(library.label)">
+    <div class="label"> {{library.label}}</div>
+      <div class="adress">
+        <div class="rue">
+            {{library.addressDTO.numberStreet + ' ' + library.addressDTO.street}}
+        </div>
+        <div class="codePostalVille">
+            {{library.addressDTO.postalCode + ' ' + library.addressDTO.city}}
+        </div>
+        
+    </div> 
+    <div class="director"> 
+            {{library.directorDTO.firstname + ' ' + library.directorDTO.lastname.toUpperCase()}}
+    </div> 
+</div> 
+

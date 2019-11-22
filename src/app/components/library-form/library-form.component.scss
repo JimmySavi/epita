@@ -1,0 +1,56 @@
+.line {
+    margin-bottom: 20px;
+    margin-left: 10px; 
+    
+
+    label{
+         width: 600px;
+         display: block;
+    }
+
+    input{
+        width: 500px;
+        display: block;
+    }
+
+    button{
+        margin-top: 10px;
+        float: right;
+    }
+}
+
+.shape {
+    border-style: solid;
+    border-color: gray;
+    width: 600px;
+    border-radius: 2px;
+    border-width: 1px;
+    margin-bottom: 30px;
+
+    h3{
+        margin-top: -13px;
+        background-color: white;
+        width: 91px;
+        margin-left: 24px;
+    }
+}
+
+.alert {
+    background-color: #ffb3b3;
+    border-radius: 7px;
+    min-height: 35px;
+    padding: 7px;
+    margin-bottom: 10px;
+    }
+
+   button {
+    background-color:black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+   }

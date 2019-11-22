@@ -1,0 +1,90 @@
+<h1>Mettre à jour une bibliothèque</h1>
+
+<form [formGroup]="libraryForm" (ngSubmit)="onSubmit()"> 
+
+<div *ngIf="label.invalid && (label.dirty || label.touched)" 
+        class="alert">
+    
+      <div *ngIf="label.errors.required">
+       Le libellé est obligatoire.
+      </div>
+      <div *ngIf="label.errors.minlength"> 
+        Le libellé doit faire au moins 4 caractères
+      </div>
+</div>
+
+
+<div *ngIf="type.invalid && (type.dirty || type.touched)" 
+        class="alert">
+    
+      <div *ngIf="type.errors.availablestype"> 
+           Le type doit être PUBLIC ou NATIONAL
+        </div>
+</div>
+
+<div class="line"> 
+    <label>
+        Libellé:
+         <input type="text" formControlName="label"  >
+    </label>
+</div>
+     
+<div class="line"> 
+    <label>
+        Type:
+         <input type="text" formControlName="type" >
+    </label>
+    </div>
+
+    <div class="shape">
+        <h3>Directeur:</h3>
+        <div class="line"> 
+        <label>
+        Prénom:
+        <input type="text" formControlName="firstName">
+        </label>
+       </div>
+    
+   
+    <div class="line"> 
+        <label>
+        Nom:
+        <input type="text" formControlName="lastName">
+        </label>
+        </div>
+    </div>
+
+    <div class="shape">
+            <h3>Adresse:</h3>
+    <div class="line"> 
+    <label >
+        N° Rue:
+         <input type="text" formControlName="numberStreet">
+       </label>
+    </div>
+    <div class="line"> 
+       <label>
+         Rue:
+         <input type="text" formControlName="street">
+       </label>
+    </div>
+
+    <div class="line"> 
+       <label>
+        Code Postal:
+        <input type="text" formControlName="postalCode">
+      </label>
+    </div>
+
+    <div class="line"> 
+      <label>
+        Ville:
+        <input type="text" formControlName="city">
+      </label>
+  </div>
+
+  <div class="line"> 
+      <button> Sauvegarder</button>
+  </div>
+</div>
+</form>

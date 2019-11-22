@@ -1,0 +1,36 @@
+
+
+
+<button disabled='{{isDisabled}}' (click) ='change()'>Try Me</button>
+<br>
+
+<button (click)="onClickMe()">Click me!</button>
+
+
+{{clickMessage}}
+
+<br>
+<input (keyup)="onKey($event)">
+<br>
+
+  <p>{{values}}</p>
+
+  <br>
+
+  Entrez votre nom:  <input [(ngModel)]="name">
+
+  <br>
+  Mon nom est : {{name}}
+
+
+  <!-- Tp sur les instructions -->
+<br>
+  <p>Liste des librairies:</p>
+  
+  <ul>
+    <li *ngFor="let library of libraries">
+      {{ library }}
+    </li>
+  </ul>
+
+  <h2>je sais faire une addition 10 + 8 =  {{10 +8 }}</h2>
